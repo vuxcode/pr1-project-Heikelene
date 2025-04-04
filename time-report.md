@@ -1,8 +1,3 @@
 # Time Report
 
-> Write about what you have done and how long you have worked on each part of the project.
-
-For example: 
-
-- 2022-10-24 18:00 Worked for 1 hour.
-  - *List the things you have done.*
+  - 2025-04-04 08:10 Worked for 10 min on index.
