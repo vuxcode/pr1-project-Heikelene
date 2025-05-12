@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+<!--Creating a Title for the projekt-->
+	<title>Ocarina: Music Experience</title>
+	 <style>	
+	  #ocarina_picture { 
+			/*display: inline-block;*/
+			background-color: white;
+			border: solid 3px rgb(82, 80, 80); /*shorthand for border properties*/
+			margin-top: 16px;
+			margin-right: 16px;
+			margin-bottom: 16px;
+			margin-left: 50px;
+			padding-top: 30px;
+			padding-right: 35px;
+			padding-bottom: 30px;
+			padding-left: 30px;	
+		} 
+		body { 
+			/*font-family: Arial, Helvetica, sans-serif; -changes the text in all of the element*/
+			/*margin: 0 auto;*/
+			background-color: grey;
+			min-width: 300px;
+			max-width: 300px;
+		}
+		</style>	
+</head>
+
+<body>	
+<!--picture of the ocarina-->
+	<figure>	
+		<img id="ocarina_picture" src="ocarinabild_to_use.png" width="400px" height="400px">		
+	</figure>
+
+<!--Audio element for the files and id, these are the short tunes-->
+	<audio id="a_short" src="OOT_Notes_Ocarina_A_short.wav"></audio>
+	<audio id="b_short" src="OOT_Notes_Ocarina_B_short.wav"></audio>
+	<audio id="d_short" src="OOT_Notes_Ocarina_D_short.wav"></audio>
+	<audio id="d2_short" src="OOT_Notes_Ocarina_D2_short.wav"></audio>
+	<audio id="f_short" src="OOT_Notes_Ocarina_F_short.wav"></audio>
+<!--These are the longer tunes-->
+	<audio id="a_medium" src="OOT_Notes_Ocarina_A_med.wav"></audio>
+	<audio id="b_medium" src="OOT_Notes_Ocarina_B_med.wav"></audio>
+	<audio id="d_medium" src="OOT_Notes_Ocarina_D_med.wav"></audio>
+	<audio id="d2_medium" src="OOT_Notes_Ocarina_D2_med.wav"></audio>
+	<audio id="f_medium" src="OOT_Notes_Ocarina_F_med.wav"></audio>
+	
+<!--Element and ids for buttons, these are for the short tunes-->
+	<button id="q_button" onclick="buttonpress()" style="position: absolute; left: 200px; top: 193px;">q</button>
+	<button id="w_button" onclick="buttonpress()" style="position: absolute; left: 241px; top: 197px;">w</button>
+	<button id="e_button" onclick="buttonpress()" style="position: absolute; left: 285px; top: 215px;">e</button>
+	<button id="r_button" onclick="buttonpress()" style="position: absolute; left: 326px; top: 246px;">r</button>
+	<button id="f_button" onclick="buttonpress()" style="position: absolute; left: 385px; top: 254px;">f</button>
+<!--And these is for the longer tunes-->
+	<button id="g_button" onclick="buttonpress()" style="position: absolute; left: 365px; top: 152px;">g</button>
+	<button id="h_button" onclick="buttonpress()" style="position: absolute; left: 408px; top: 154px;">h</button>
+	<button id="j_button" onclick="buttonpress()" style="position: absolute; left: 450px; top: 154px;">j</button>
+	<button id="k_button" onclick="buttonpress()" style="position: absolute; left: 486px; top: 147px;">k</button>
+	<button id="v_button" onclick="buttonpress()" style="position: absolute; left: 428px; top: 208px;">v</button>
+
+	<script>
+/*Input for short tunes*/	
+		var qkey = document.getElementById("a_short");
+		var wkey = document.getElementById("b_short");
+		var ekey = document.getElementById("d_short");
+		var rkey = document.getElementById("d2_short");
+		var fkey = document.getElementById("f_short");
+/*Input for longer tunes*/	
+		var gkey = document.getElementById("a_medium");
+		var hkey = document.getElementById("b_medium");
+		var jkey = document.getElementById("d_medium");
+		var kkey = document.getElementById("d2_medium");
+		var vkey = document.getElementById("f_medium");
+		
+/*input for the buttons*/	
+		var button_q = document.getElementById("q_button");
+		var button_w = document.getElementById("w_button");
+		var button_e = document.getElementById("e_button");
+		var button_r = document.getElementById("r_button");
+		var button_f = document.getElementById("f_button");
+		var button_g = document.getElementById("g_button");
+		var button_h = document.getElementById("h_button");
+		var button_j = document.getElementById("j_button");
+		var button_k = document.getElementById("k_button");
+		var button_v = document.getElementById("v_button");
+
+		
+	
+/*Adding eventlistener with keyup that waits for the right keys to be pressed */	
+		document.addEventListener("keyup", keyboardpress);  
+/*Creating a function that will play the soundfile*/
+	function keyboardpress(event) {
+		console.log(event);
+// Use the play sound function
+		playSound(event.key);
+	}		
+
+	function buttonpress(event) {
+		playSound(this.event.target.textContent)
+	}
+  
+  function playSound(event) {
+	console.log(event)
+/*The shorter tunes */	
+			if (event == "q"){
+				console.log("We pushed q");
+				qkey.cloneNode(true).play(); }
+
+			else if (event == "w") {
+				console.log("We pushed w");
+				wkey.cloneNode(true).play(); }
+
+			else if (event == "e") {
+				console.log("We pushed e");
+				ekey.cloneNode(true).play(); }
+			
+			else if (event == "r") {
+				console.log("We pushed r");
+				rkey.cloneNode(true).play(); }	
+
+			else if (event == "f") {
+				console.log("We pushed f");
+				fkey.cloneNode(true).play(); }
+/* The longer tunes */
+			else if (event == "g") {
+				console.log("We pushed g");
+				gkey.cloneNode(true).play(); }	
+
+			else if (event == "h") {
+				console.log("We pushed h");
+				hkey.cloneNode(true).play(); }
+
+			else if (event == "j") {
+				console.log("We pushed j");
+				jkey.cloneNode(true).play(); }		
+      
+			else if (event == "k") {
+				console.log("We pushed k");
+				kkey.cloneNode(true).play(); }	
+			
+			else if (event == "v") {
+				console.log("We pushed v");
+				vkey.cloneNode(true).play(); }	
+		}	
+  </script>
+</body>
+</html>
