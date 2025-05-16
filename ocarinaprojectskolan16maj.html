@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<head>
+<!--Title of the projekt-->
+	<title>Ocarina: Music Experience</title>
+	 <style>	
+	  #ocarina_picture { 			
+			background-color: white;
+			border: solid 3px rgb(82, 80, 80); /*shorthand for border properties*/
+			margin-top: 16px; 
+			margin-right: 16px;
+			margin-bottom: 16px;
+			margin-left: 50px;
+			padding-top: 30px;
+			padding-right: 35px;
+			padding-bottom: 30px;
+			padding-left: 30px;	
+		} 
+		body { 		
+			background-color: grey;
+			min-width: 300px;
+			max-width: 300px;
+		}				
+		button:hover {
+			background-color: yellow;			
+		}
+		#eponaSong { 
+			background-color: rgb(219, 126, 69);
+			cursor: pointer;			
+		}
+		#sariaSong {
+			background-color: rgb(1, 173, 30);
+			cursor: pointer;
+		}
+		#timeSong {
+			background-color:  rgb(38, 81, 210);
+			cursor: pointer
+		}
+		#stormSong {
+			background-color: rgb(130, 142, 26);
+			cursor: pointer;
+		}
+		#lullabyZelda {
+			background-color: rgb(255, 75, 198);
+			cursor: pointer;
+		}
+		#helpfulmessage {
+			font-size: 16px;
+			margin: 16px;
+		}
+
+		</style>	
+</head>
+
+<body>	
+<!--picture of the ocarina-->
+	<figure>	
+		<img id="ocarina_picture" src="ocarinabild_to_use.png" width="400px" height="400px">		
+	</figure>
+
+<!--Audio element for the files and id, these are the short tunes. Id is so JS can find the soundfile in the code.-->
+	<audio id="a_short" src="OOT_Notes_Ocarina_A_short.wav"></audio>
+	<audio id="b_short" src="OOT_Notes_Ocarina_B_short.wav"></audio>
+	<audio id="d_short" src="OOT_Notes_Ocarina_D_short.wav"></audio>
+	<audio id="d2_short" src="OOT_Notes_Ocarina_D2_short.wav"></audio>
+	<audio id="f_short" src="OOT_Notes_Ocarina_F_short.wav"></audio>
+<!--These are the longer tunes-->
+	<audio id="a_medium" src="OOT_Notes_Ocarina_A_med.wav"></audio>
+	<audio id="b_medium" src="OOT_Notes_Ocarina_B_med.wav"></audio>
+	<audio id="d_medium" src="OOT_Notes_Ocarina_D_med.wav"></audio>
+	<audio id="d2_medium" src="OOT_Notes_Ocarina_D2_med.wav"></audio>
+	<audio id="f_medium" src="OOT_Notes_Ocarina_F_med.wav"></audio>
+	
+<!--Element and ids for buttons, these are for the short tunes. Onclick is a attribute, which helps us to control the button element.
+buttonpress is the function that we created ⬇️. Id so JS can find the button in the html part of the code.-->
+	<button id="q_button" onclick="buttonclicked()" style="position: absolute; left: 200px; top: 193px;">q</button>
+	<button id="w_button" onclick="buttonclicked()" style="position: absolute; left: 241px; top: 197px;">w</button>
+	<button id="e_button" onclick="buttonclicked()" style="position: absolute; left: 285px; top: 215px;">e</button>
+	<button id="r_button" onclick="buttonclicked()" style="position: absolute; left: 326px; top: 246px;">r</button>
+	<button id="f_button" onclick="buttonclicked()" style="position: absolute; left: 385px; top: 254px;">f</button>
+<!--And these is for the longer tunes-->
+	<button id="g_button" onclick="buttonclicked()" style="position: absolute; left: 365px; top: 152px;">g</button>
+	<button id="h_button" onclick="buttonclicked()" style="position: absolute; left: 408px; top: 154px;">h</button>
+	<button id="j_button" onclick="buttonclicked()" style="position: absolute; left: 450px; top: 154px;">j</button>
+	<button id="k_button" onclick="buttonclicked()" style="position: absolute; left: 486px; top: 147px;">k</button>
+	<button id="v_button" onclick="buttonclicked()" style="position: absolute; left: 428px; top: 208px;">v</button>
+
+<!--Buttons in progress-->
+	<button id="eponaSong" onclick="challengeSong()">Epona's song</button>
+	<button id="sariaSong" onclick="challengeSong()">Saria's song</button>
+	<button id="timeSong" onclick="challengeSong()">Song of Time</button>
+	<button id="stormSong" onclick="challengeSong()">Song of Storm</button>
+	<button id="lullabyZelda" onclick="challengeSong()">Zelda's Lullaby</button> 
+
+	<div id="helpfullmessage"></div>
+
+<!--JS starts here-->
+	<script>
+/*Input for short sounds. The function getElementById is used to find an element in the html with the written Id.*/	
+		var qkey = document.getElementById("a_short");
+		var wkey = document.getElementById("b_short");
+		var ekey = document.getElementById("d_short");
+		var rkey = document.getElementById("d2_short");
+		var fkey = document.getElementById("f_short");
+/*Input for longer sounds*/	
+		var gkey = document.getElementById("a_medium");
+		var hkey = document.getElementById("b_medium");
+		var jkey = document.getElementById("d_medium");
+		var kkey = document.getElementById("d2_medium");
+		var vkey = document.getElementById("f_medium");
+
+/*input for the buttons with sound*/	
+		var button_q = document.getElementById("q_button");
+		var button_w = document.getElementById("w_button");
+		var button_e = document.getElementById("e_button");
+		var button_r = document.getElementById("r_button");
+		var button_f = document.getElementById("f_button");
+		var button_g = document.getElementById("g_button");
+		var button_h = document.getElementById("h_button");
+		var button_j = document.getElementById("j_button");
+		var button_k = document.getElementById("k_button");
+		var button_v = document.getElementById("v_button");
+
+  //input for buttons with song 'challenges' 
+		var epona = document.getElementById("eponaSong");
+		var saria = document.getElementById("sariasSong");
+		var time = document.getElementById("timeSong");
+		var storm = document.getElementById("stormSong");
+		var zelda = document.getElementById("lullabyZelda"); 
+
+//Array of the connected variables to the tunes.
+		var allistune = [qkey, wkey, ekey, rkey, fkey,
+					  	gkey, hkey, jkey, kkey, vkey]; // Index: 0 1 2 3 4 5 6 7 8 9
+
+//Array of the connected variables to the buttons
+		var allisbutton = [button_q, button_w, button_e, button_r, button_f, 
+											button_g, button_h, button_j, button_k, button_v] // Index: 0 1 2 3 4 5 6 7 8 9	
+
+//Merging of allistune and allisbutton into a new array with .concat();. Their indexes will merge togheter, 
+// lets you treat them like one array.
+		var tuneMarrybutton	= allistune.concat(allisbutton);		 
+
+//Array of the string values of the keyboard keys that match to the buttons and audio of same index.
+		var alliskey = ["q", "w", "e", "r", "f", 
+					"g", "h", "j", "k", "v"]; // Index: 0 1 2 3 4 5 6 7 8 9		
+	
+/*Adding the function eventlistener. ("keyup", keyboardpress) - we are telling the eventlistener the name of the function. */	
+		document.addEventListener("keyup", keyboardpress)   
+
+
+/*event "owns" key so when key is pressed 'playsound function' will be executed. */
+
+//'keyboardpress function'.
+	function keyboardpress(event) {
+		console.log(event);
+		playSound(event.key);	}
+// 'buttonclicked function'		
+	function buttonclicked(event) {		
+		playSound(this.event.target.textContent) 			
+	}
+	
+	var eponasRightOrder = ["k", "h", "q", "k", "h", "q", "k", "h","q", "h", "g"]		
+	var inputRightNow = 0; //to track what the user should play next. 
+	//'playSound function'
+ 	function playSound(event) {
+	console.log(event)
+	if (eponasRightOrder[inputRightNow] == event) {
+		inputRightNow++;
+		console.log("GREAT!");
+		helpfullmessage.innerText = "GREAT!";
+	}
+	else {
+		console.log("WRONG KEY!");
+		helpfullmessage.innerText = "WRONG KEY";
+	}
+	console.log(alliskey.indexOf(event));
+	allistune[alliskey.indexOf(event)].cloneNode(true).play();	
+	}	
+	//The indexes of allistunes will correspond to the same indexes in alliskeys
+
+
+//Everything needed for the challenge starts here.....⬇️.........................................................................
+
+	//adding eventlistener for the song 'challenge' buttons
+		epona.addEventListener("click", startGame); 
+
+	//making a function for a challengeSong 
+		var tracker = []; //empty array to store data in?
+		var challengeFalse = false;
+		var challengeTrue = true;	
+		var thisChallenge = null;	
+		var thisChallengeEpona = eponasRightOrder
+		
+		
+		function resetGame() {
+		//tracker = [];
+		inputRightNow = 0;
+		//challengeFalse
+		thisChallenge
+		alert("You can now choose a new challenge if you like!")
+	} 
+		function startGame() {
+		epona
+		//tracker = [];
+		inputRightNow = 0;
+		//challengeTrue	
+		thisChallengeEpona;
+		thisChallenge		
+		alert("Start playing Epona's Song 🐴");			
+		}
+
+		/*function keepGoing() {
+			inputRightNow++			
+			tracker.push(key);		
+		} */
+
+
+		function challengeSong(event) {
+			if (keyboardpress === eponasRightOrder[inputRightNow]){
+				inputRightNow++;
+				console.log(Great);
+			
+			if (keyboardpress === -1) {
+							alert("That wasen't right, try again friend!");
+							resetGame();	}
+				      console.log(wrong, restart); } }
+		
+
+		/*function checktheChallengeInput(keyboardpress) {
+			if (challengeTrue == startGame) {
+				keepGoing
+					if (inputRightNow === eponasRightOrder.length - 1) {
+						alert("Well done, you cleared Epona's Song!")
+				        resetGame();						
+					} 	else if (inputRightNow != eponasRightOrder.length)
+							alert("That wasen't right, try again friend!");
+							resetGame();	}
+			}*/
+		
+	
+	
+	
+			
+
+
+				
+				
+	
+
+
+
+	
+			
+
+
+  
+
+	</script>
+
+</body>
+</html>
