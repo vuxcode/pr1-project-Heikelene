@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<head>
+<!--Title of the projekt-->
+	<title>Ocarina: Music Experience</title>
+	 <style>		
+/* IDs in alphabetical order */
+		#commentStayQuiet {
+			background-color: rgb(207, 207, 207);			
+			cursor: pointer;		
+			border: 5px solid black;		
+			border-radius: 10px;
+			box-shadow: 2px 2px 2px rgb(0, 0, 0);
+			font-family: 'Times New Roman', Times, serif; 
+			font-weight: bold;
+			font-size: 18px;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 2px;
+			padding-left: 5px;	
+			min-width: 150px;
+			max-width: 150px;	
+		}
+		#eponaPic{
+			background-color: white;
+			border: solid 5px  rgb(219, 126, 69);
+			border-radius: 10px;
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;
+			margin-top: -4px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 2px;
+			padding-right: 8px;
+			padding-bottom: 0px;
+			padding-left: 8px;
+			width: 200px; 
+			height: 100px;	
+		}
+		#eponaSong { 
+			background-color: rgb(219, 126, 69);			
+			cursor: pointer;				
+			border-radius: 10px;
+			box-shadow: 2px 2px 2px rgb(118, 53, 4);
+			font-family: 'Times New Roman', Times, serif; 
+			font-weight: bold;
+			font-size: 22px;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 2px;
+			padding-left: 5px;	
+			min-width: 150px;
+			max-width: 150px;	
+		}
+		#fixerUpper {
+			background-color: white;
+			border: solid 5px rgb(82, 80, 80);
+			border-radius: 10px;
+			box-shadow: 3px 3px 3px black;			
+			margin-top: 0px; 
+			margin-right: -176px;
+			margin-bottom: 0px;
+			margin-left: 157px;
+			padding-top: 0px;
+			padding-right: 8px;
+			padding-bottom: 7px;
+			padding-left: 8px;				
+			text-align: center;
+		}				
+		#ocarina_picture { 			
+			background-color: white;
+			border: solid 3px rgb(82, 80, 80);
+			border-radius: 20px;
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;
+			margin-top: 16px; 
+			margin-right: 16px;
+			margin-bottom: 16px;
+			margin-left: 50px;
+			padding-top: 30px;
+			padding-right: 35px;
+			padding-bottom: 30px;
+			padding-left: 30px;	
+			width: 400px; 
+			height: 400px;
+		} 	
+		#referenceSheet{	
+			background-color: white;		
+			border: solid 5px rgb(82, 80, 80); 
+			border-radius: 10px;
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;			
+			margin-top: -496px; 
+			margin-right: 0px;
+			margin-bottom: 50px;
+			margin-left: 818px;
+			padding-top: 0px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;	
+			width: 400px; 
+			height: 450px;	
+		}
+		#sariaPic{
+			background-color: white;
+			border: solid 5px rgb(1, 173, 30);
+			border-radius: 10px;
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;			
+			margin-top: 9px; 
+			margin-right: 0px;
+			margin-bottom: 9px;
+			margin-left: 0px;
+			padding-top: 2px;
+			padding-right: 8px;
+			padding-bottom: 0px;
+			padding-left: 8px;	
+			width: 200px; 
+			height: 100px;	
+		}	
+		#sariaSong {
+			background-color: rgb(1, 173, 30);
+			cursor: pointer;
+			border-radius: 10px;
+			box-shadow: 2px 2px 2px rgb(2, 66, 4);
+			font-family: 'Times New Roman', Times, serif; 
+			font-weight: bold;
+			font-size: 22px;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 2px;
+			padding-left: 5px;
+			min-width: 140px;
+			max-width: 140px;	
+		}
+		#stormPic{
+			background-color: white;
+			border: solid 5px rgb(130, 142, 26);
+			border-radius: 10px;
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;
+			margin-top: 9px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 2px;
+			padding-right: 8px;
+			padding-bottom: 0px;
+			padding-left: 8px;	
+			width: 200px; 
+			height: 100px;	
+		}	
+		#stormSong {
+			background-color: rgb(130, 142, 26);
+			cursor: pointer;	
+			border-radius: 10px;
+			box-shadow: 2px 2px 2px  rgb(67, 73, 13);
+			font-family: 'Times New Roman', Times, serif; 
+			font-weight: bold;
+			font-size: 22px;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 2px;
+			padding-left: 5px;	
+			min-width: 150px;
+			max-width: 150px;		
+		}	
+		#timePic{
+			background-color: white;
+			border: solid 5px rgb(38, 81, 210); 
+			border-radius: 10px;
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 2px;
+			padding-right: 8px;
+			padding-bottom: 0px;
+			padding-left: 8px;
+			width: 200px; 
+			height: 100px;	
+		}	
+		#timeSong {
+			background-color:  rgb(38, 81, 210);
+			cursor: pointer;
+			border-radius: 10px;
+			box-shadow: 2px 2px 2px rgb(9, 3, 98);
+			font-family: 'Times New Roman', Times, serif; 
+			font-weight: bold;
+			font-size: 22px;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 2px;
+			padding-left: 5px;
+			min-width: 140px;
+			max-width: 140px;	
+		}	
+		#urginUsertoPress { 
+			background-color: rgb(221, 221, 112);				
+			box-shadow: 3px 3px 3px black;
+			display: inline-block;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 17px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0;
+			padding-right: 7px;
+			padding-bottom: 0px;
+			padding-left: 11px;	
+			text-align: center;
+			text-shadow: 2px 2px 2px white;	
+			min-width: 160px;
+			max-width: 160px;			
+		}
+/* IDs for buttons, are NOT in alphabetical order */
+			#q_button {
+			border: 3px solid rgb(6, 148, 196);
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 2px;
+			padding-left: 3px;
+			text-align: center;
+		}
+		#w_button	{
+			border: 3px solid rgb(6, 148, 196);
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 4px;
+			padding-left: 3px;
+			text-align: center;
+		}
+		#e_button	{
+			border: 3px solid rgb(6, 148, 196);
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 5px;
+			padding-bottom: 1px;
+			padding-left: 5px;
+			text-align: center;
+		}
+		#r_button	{
+			border: 3px solid rgb(6, 148, 196);
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 6px;
+			padding-right: 10px;
+			padding-bottom: 7px;
+			padding-left: 13px;
+			text-align: center;
+		}
+		#f_button	{		
+			border: 3px solid rgb(6, 148, 196);	
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 8px;
+			padding-bottom: 1px;
+			padding-left: 5px;
+			text-align: center;
+		}
+		#g_button	{
+			border: 3px solid rgb(7, 144, 18);	
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 11px;
+			padding-right: 13px;
+			padding-bottom: 12px;
+			padding-left: 13px;
+			text-align: center;
+		}
+		#h_button	{
+			border: 3px solid rgb(7, 144, 18);	
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 6px;
+			padding-bottom: 4px;
+			padding-left: 4px;
+			text-align: center;
+		}
+		#j_button	{
+			border: 3px solid rgb(7, 144, 18);	
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 5px;
+			padding-right: 9px;
+			padding-bottom: 4px;
+			padding-left: 10px;
+			text-align: center;
+		}
+		#k_button	{
+			border: 3px solid rgb(7, 144, 18);	
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 3px;
+			padding-right: 7px;
+			padding-bottom: 3px;
+			padding-left: 4px;
+			text-align: center;
+		}
+		#v_button	{
+			border: 3px solid rgb(7, 144, 18);	
+			border-radius: 50%;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			padding-top: 0px;
+			padding-right: 8px;
+			padding-bottom: 1px;
+			padding-left: 5px;
+			text-align: center;
+		}
+		body { 		
+			background-color: grey;
+			min-width: 150px;
+			max-width: 300px;
+		}				
+		button:hover {
+			background-color: yellow;			
+		}		
+		button:active {
+			background-color: rgb(246, 112, 17); 
+		}		
+		main { 			
+			margin-top: -562px; 
+			margin-right: 0px;
+			margin-bottom: 0px;
+			margin-left: 555px;
+			padding-top: 0;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;	
+		}	
+		.keyup_Activecolor {
+			background:rgb(246, 112, 17); 			
+		}		
+		</style>	
+</head>
+
+<body>	
+<!--div for the title text-->	
+	<div id="fixerUpper"><h1><b>Ocarina:</b> <br><i>Music Experience v.1</i></h1></div>	
+<!--picture of the ocarina-->
+	<figure>	
+		<img id="ocarina_picture" src="ocarinabild_to_use.png">	
+	</figure>
+<!--The "music sheets"-->			
+	<main>
+		<figure>
+			<img id="eponaPic" src="epona_notes.png">
+		</figure>
+		<figure>
+			<img id="sariaPic" src="saria_notes.png">
+		</figure>
+		<figure>
+			<img id="timePic" src="time_notes.png">
+		</figure>
+			<figure>
+			<img id="stormPic" src="storm_notes.png">
+		</figure>
+	</main>
+<!--reference sheet-->	
+	<figure>
+		<img id="referenceSheet" src="reference.png">
+	</figure>
+
+<!--Audio element for the files and id, these are the short tunes. Id is so JS can find the soundfile in the code.-->
+	<audio id="a_short" src="OOT_Notes_Ocarina_A_short.wav"></audio>
+	<audio id="b_short" src="OOT_Notes_Ocarina_B_short.wav"></audio>
+	<audio id="d_short" src="OOT_Notes_Ocarina_D_short.wav"></audio>
+	<audio id="d2_short" src="OOT_Notes_Ocarina_D2_short.wav"></audio>
+	<audio id="f_short" src="OOT_Notes_Ocarina_F_short.wav"></audio>
+<!--These are the longer tunes-->
+	<audio id="a_medium" src="OOT_Notes_Ocarina_A_med.wav"></audio>
+	<audio id="b_medium" src="OOT_Notes_Ocarina_B_med.wav"></audio>
+	<audio id="d_medium" src="OOT_Notes_Ocarina_D_med.wav"></audio>
+	<audio id="d2_medium" src="OOT_Notes_Ocarina_D2_med.wav"></audio>
+	<audio id="f_medium" src="OOT_Notes_Ocarina_F_med.wav"></audio>
+	
+<!--Element and ids for buttons, these are for the short tunes. Onclick is a attribute, which helps us to control the button element.
+buttonpress is the function that we created ⬇️. Id so JS can find the button in the html part of the code.-->
+	<button id="q_button" onclick="buttonclicked()" style="position: absolute; left: 199px; top: 331px;">q</button>
+	<button id="w_button" onclick="buttonclicked()" style="position: absolute; left: 240px; top: 335px;">w</button>
+	<button id="e_button" onclick="buttonclicked()" style="position: absolute; left: 283px; top: 354px;">e</button>
+	<button id="r_button" onclick="buttonclicked()" style="position: absolute; left: 319px; top: 379px;">r</button>
+	<button id="f_button" onclick="buttonclicked()" style="position: absolute; left: 385px; top: 405px;">f</button>
+<!--And these is for the longer tunes-->
+	<button id="g_button" onclick="buttonclicked()" style="position: absolute; left: 358px; top: 279px;">g</button>
+	<button id="h_button" onclick="buttonclicked()" style="position: absolute; left: 408px; top: 291px;">h</button>
+	<button id="j_button" onclick="buttonclicked()" style="position: absolute; left: 445px; top: 288px;">j</button>
+	<button id="k_button" onclick="buttonclicked()" style="position: absolute; left: 484px; top: 283px;">k</button>
+	<button id="v_button" onclick="buttonclicked()" style="position: absolute; left: 428px; top: 372px;">v</button>
+
+<!--Buttons in progress-->
+	<button id="eponaSong" onclick="startGame()" style="position: absolute; left: 599px; top: 83px;">Epona's song</button>
+	<button id="sariaSong" onclick="startGameS()" style="position: absolute; left: 599px; top: 228px;">Saria's song</button>
+	<button id="timeSong" onclick="startGamet()" style="position: absolute; left: 599px; top: 368px;">Song of Time</button>
+	<button id="stormSong" onclick="startGamest()" style="position: absolute; left: 599px; top: 510px;">Song of Storm</button>
+
+<!--Erase button of sorts-->
+	<button id="commentStayQuiet" onclick="innerPeace()" style="position: absolute; left: 242px; top: 679px;">Erase Comment</button>	 	
+
+<!--For message that pops up if you play the right/wrong notes. Default color is green.-->	
+	<div id="helpfullmessage_green"  style="position: absolute; left: 146px; top: 519px; font-size: 24px; font-weight: bold; color: rgb(11, 171, 11);"></div>
+	<div id="urginUsertoPress" style="position: absolute; left: 587px; top: -6px; "><p>Click song button <br>for a challenge ⬇️</p></div>
+
+<!--JS starts here-->
+	<script>
+/*Input for short sounds. The function getElementById is used to find an element in the html with the written Id.*/	
+		var qkey = document.getElementById("a_short");
+		var wkey = document.getElementById("b_short");
+		var ekey = document.getElementById("d_short");
+		var rkey = document.getElementById("d2_short");
+		var fkey = document.getElementById("f_short");
+/*Input for longer sounds*/	
+		var gkey = document.getElementById("a_medium");
+		var hkey = document.getElementById("b_medium");
+		var jkey = document.getElementById("d_medium");
+		var kkey = document.getElementById("d2_medium");
+		var vkey = document.getElementById("f_medium");
+
+/*input for the buttons with sound*/	
+		var button_q = document.getElementById("q_button");
+		var button_w = document.getElementById("w_button");
+		var button_e = document.getElementById("e_button");
+		var button_r = document.getElementById("r_button");
+		var button_f = document.getElementById("f_button");
+		var button_g = document.getElementById("g_button");
+		var button_h = document.getElementById("h_button");
+		var button_j = document.getElementById("j_button");
+		var button_k = document.getElementById("k_button");
+		var button_v = document.getElementById("v_button");
+
+  //input for buttons with song 'challenges' 
+		var epona = document.getElementById("eponaSong");
+		var saria = document.getElementById("sariasSong");
+		var time = document.getElementById("timeSong");
+		var storm = document.getElementById("stormSong");		
+		var silent = document.getElementById("commentStayQuiet")
+
+//Array of the connected variables to the tunes.
+		var allistune = [qkey, wkey, ekey, rkey, fkey,
+					  	gkey, hkey, jkey, kkey, vkey]; // Index: 0 1 2 3 4 5 6 7 8 9
+
+//Array of the connected variables to the buttons
+		var allisbutton = [button_q, button_w, button_e, button_r, button_f, 
+											button_g, button_h, button_j, button_k, button_v] // Index: 0 1 2 3 4 5 6 7 8 9	
+
+//Merging of allistune and allisbutton into a new array with .concat();. Their indexes will merge togheter, 
+// lets you treat them like one array.
+		var tuneMarrybutton	= allistune.concat(allisbutton);		 
+
+//Array of the string values of the keyboard keys that match to the buttons and audio of same index.
+		var alliskey = ["q", "w", "e", "r", "f", 
+					"g", "h", "j", "k", "v"]; // Index: 0 1 2 3 4 5 6 7 8 9		
+	
+/*Adding the function eventlistener. ("keyup", keyboardpress) - we are telling the eventlistener the name of the function. */	
+		document.addEventListener("keyup", keyboardpress)   
+
+/*event "owns" key so when key is pressed 'playsound function' will be executed. */
+
+//'keyboardpress function'.
+	function keyboardpress(event) {
+		console.log(event);		
+		playSound(event.key); 					
+	}
+// 'buttonclicked function'		
+	function buttonclicked(event) {		
+		playSound(this.event.target.textContent) 			
+	}	
+
+	var eponasRightOrder = ["k", "w", "g", "k", "w", "g", "k", "w","g", "h", "g"]		
+	var sariasRightOrder = ["f", "q", "h", "f", "q", "h", "f", "q", "h", "k", "h"]	
+	var timesRightOrder = ["g", "j", "v", "g", "j", "v"]
+	var stormsRightOrder = ["j", "f", "r", "j", "f", "r"]	
+	var inputRightNow = 0; 
+	var songtoPlay = [];
+
+//adding eventlistener for the song 'challenge' buttons
+	epona.addEventListener("click", startGame); 
+	saria.addEventListener("click", startGameS); 
+	time.addEventListener("click", startGamet);
+	storm.addEventListener("click", startGamest);
+	silent.addEventListener("click", innerPeace);
+
+//To make earlier comments disappear visually	
+	function feedbackBeGone() { 
+		helpfullmessage_green.innerText = "OOOOOOOO"; 		
+		helpfullmessage_green.style.color = "white";	
+	}
+//Output for comment silence button.
+	function innerPeace() {				
+		feedbackBeGone();
+		helpfullmessage_green.style.backgroundColor = "white" }		
+//Output for the song challengebuttons.	
+	function startGame() {			
+		alert("Start playing Epona's Song 🐴");
+		songtoPlay = eponasRightOrder; //Song to play holds the expected sequence like the eponas song array. 
+		inputRightNow = 0;	//makes user start from index 0 in the array.	
+		feedbackBeGone();
+		}			
+	function startGameS() {			
+		alert("Start playing Saria's Song 🍃");	
+		songtoPlay = sariasRightOrder;
+		inputRightNow = 0; 
+		feedbackBeGone();	
+		}
+	function startGamet() {		
+		alert("Start playing Song of Time 🕰️"); 
+		songtoPlay = timesRightOrder;
+		inputRightNow = 0;	
+		feedbackBeGone();
+		}
+	function startGamest() {		
+		alert("Start playing Song of Storm 🌧️");	
+		songtoPlay = stormsRightOrder;
+		inputRightNow = 0;	
+		feedbackBeGone();
+		}	
+
+	//'playSound function'
+ 	function playSound(event) {	
+	  if (alliskey.indexOf(event) !== -1) { //checks if the pressed key (event) is in the list of the valid keys. (!== -1 means not equal to -1) = this prevents the user from being able to play audio from an invalid key like the keyboard keys that arent in the asigned array (example: p etc.). 
+			allistune[alliskey.indexOf(event)].cloneNode(true).play(); //If it is one of the valid keys, then the matching index of audio plays. .cloneNode(true) creates a audio element copy, and makes it possible to overlapp sounds whitout cutting off the previous one playes.	
+		} 
+		if (songtoPlay[inputRightNow] === event) { //This checks if the user press the correct start index key in the song array.
+			inputRightNow++; //if user have pressed the array index 0, then it moves to the next expected index(key). 
+			helpfullmessage_green.innerText = "GREAT!";	//Get a positive output if the right index key has been pressed. 			
+			helpfullmessage_green.style.color = "green"; //Color changes back to green from red.	
+
+			if (inputRightNow === songtoPlay.length) { //If the user manages to play the array(keys) in the right order until the end. 
+				setTimeout(() => { //setTimeout makes the alert popup after 0,3 seconds, making the player be able to hear the last tune playes in the array. => is an arrow function, its a shorter way to write a function and is well suited with the setTimeout function. Would otherwise have looked like something like setTimeout(function(){}300); which is a little longer but also valid. 
+				alert("You cleared the song! 🎼👏")
+				helpfullmessage_green.innerText = "Cleared!🎉" //Get this message if the array has been done in the right order. 
+				helpfullmessage_green.style.color = "blue"			
+				inputRightNow = 0; //Goes back to index 0, resets progress.  			
+			}, 300);
+			} 
+		} 
+			else { //If the key pressed is wrong in said array.
+				console.log("WRONG KEY!");
+				helpfullmessage_green.innerText = "WRONG KEY";
+				helpfullmessage_green.style.color = "red"; //Color changes to red.
+				inputRightNow = 0; //resets the array to 0 and the user have to start from the beginning of the array.
+			}
+		}	
+	</script>
+</body>
+</html>
