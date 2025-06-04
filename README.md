@@ -1,6 +1,22 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/zon3mdIg)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=18976889&assignment_repo_type=AssignmentRepo)
 # Project Notes
+<br>10 min index
+<br>Läsa igenom alla lektioner 1 timme
+<br>Måla bild 2 timmar lära sig gimp.
+<br>2025-05-02: 2 timmar med att experimentera med koder och inte fatta vad jag sysslar med.
+<br>2025-05-05: 2 varav 1 timme i skolan och 1 timme hemma. Nu låter toner från knapparna.
+<br>2025-05-06: 1:30 min
+<br>2025-05-07: 1:30 
+<br>2025-05-12: läser alla lessons igen inför workshop 1 timme.
+<br>2025-05-14: 2 timmar, försöker förkorta ned min kod med arrays. Koden fungerar ej.
+<br>satt 1h timme i skolan. Suttit 3 timmar hemma extra. Nu fungerar koden.
+<br>2025-05-15: 4 timmar
+<br>2025-05-19: 3 timmar
+<br>2025-05-20: 8 timmar.
+
+Totalt: 31 timmar, men säkert flera timmar för jag glömde ibland att klocka tiden. 
+
 
 
 # Project Summary
