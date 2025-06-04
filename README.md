@@ -13,4 +13,4 @@
 <li>Om du vill göra en liten utmaning kan du klicka med muspekaren på följande knappar; Epona's Song, Saria's Song, Song of Time eller Song of Storm. När du gör det får du upp ett pop-up medelande om att du ska börja spela sången du har tryckt på. 
 <li>Spela bokstäverna i rätt ordning som det står under tillhörande sångknapp (t.ex. Epona's song: kwg kwg kwg hg). Spelar du rätt ton får du ett medelande som säger GREAT, men spelar du fel säger medelandet istället WRONG KEY och du får börja om låten från början.</li>
 <li>När du har spelat alla tonerna i rätt ordning får du ett medelande om att du har klarat sången och det står i blått Clear!🎉.</li> 
-<li>DU kan sedan välja om du vill göra en ny utmaning eller om du bara spela valfria låtar på din digitala Ocarina.</li> 
+<li>Du kan sedan välja om du vill göra en ny utmaning eller om du bara spela valfria låtar på din digitala Ocarina.</li> 
